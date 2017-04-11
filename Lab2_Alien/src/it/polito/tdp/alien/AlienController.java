@@ -47,6 +47,13 @@ public class AlienController {
     @FXML
     void doTranslate(ActionEvent event) {
     	String stringa = txtWord.getText();
+    	
+    	//controllo sull'input
+    	if(stringa == null || stringa.length() == 0){
+    		txtResult.setText("Inserire una o due parole.");
+    		return;
+    	}
+    	
     	String ar[] =stringa.split(" ");
   
     	if(ar.length == 1){
